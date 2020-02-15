@@ -1,0 +1,22 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "This repository sets up continuous delivery pipeline (CD).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Masalane/Personal-website.git"
+  },
+  "author": "Kabelo Maroga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Masalane/Personal-website/issues"
+  },
+  "homepage": "https://github.com/Masalane/Personal-website#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
