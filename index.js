@@ -1,7 +1,7 @@
 let path = require('path')
 let express = require('express')
 let app = express()
-let mainRouter = require('./mainRouters')
+let mainRouter = require('./routes/mainRouters')
 
 app.use(mainRouter)
 
