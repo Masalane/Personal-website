@@ -5,7 +5,7 @@ let app = express()
 
 // loading our routers
 // let mainRouter = require('./mainRoutes.js')
-let classRouter = require('./classRoutes.js')
+let classRouter = require('./routes/classRoutes.js')
 
 // mounting our routers
 // app.use('/', mainRouter)
