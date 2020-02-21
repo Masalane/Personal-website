@@ -1,10 +1,9 @@
-let path = require('path')
-let express = require('express')
-let app = express()
-let mainRouter = require('./routes/mainRouters')
+'use strict'
 
-app.use(mainRouter)
+let button = document.getElementById('addButton')
 
-let port = process.env.PORT || 3000
-app.listen(port)
-console.log('Express server running on port', port)
+button.addEventListener('click', function () {
+  let headerElement = document.getElementById('heading')
+  headerElement.innerHTML = 'My new heading'
+}, false)
+
