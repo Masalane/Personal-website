@@ -14,6 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // mounting the router
 app.use('/purchaseVoucher', todoRouter)
 
-let port = process.env.PORT || 3000
+let port = process.env.PORT || 8080
 app.listen(port)
 console.log('Express server running on port', port)

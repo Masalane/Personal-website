@@ -1,26 +1,41 @@
-# Personal-website
 
-This piece of work presents a small microsevices application designed in JavaScript and HTML. It 
-strives demonstrate some of software engineering fundamentals and the concept of CI/CD. Presented 
-below are the technologies used to built the application. This document also substantiate brief why 
-such technologies were used as oppossed to their counters technologies.
+SET-UP INSTRUCTIONS
 
-Following are the tools used to design and test this application:
-    1. Node.js and express framework
+    1. Download and unzip the microservice folder.
+    2. Download and install Visual Studio (VS) Code, latest version.
+    3. Download and install node.js, latest version
+    4. Open the VS Code, --> go to 'File', --> go to 'Add folder to workspace' and add the microservice folder.
+    5. Open the VS code terminal. Type node index.js in the terminal.
+    6. Your the application won't launch because we are missing express framework.
+    7. While still in the same dir, Type 'npm install --save-exact express' 
+    8. Now, type 'node index.js' on your terminal. This shoud work.
+    9. Now, go to your browser, preferably Google chrome/Firefox and type 'http://localhost:8080/purchaseVoucher/create'
+    
+
+    OR
+
+    Go to 'http://kabelo.azurewebsites.net/purchaseVoucher/create'
+
+
+DESIGN APPROACH
+
+Presented below are the technologies used to build the microservice. This document substantiate in brief why such technologies were used.
+
+Tools:
+
+    1. Node.js with express framework : 
+        Motive behind using node.js is because it is an open source tool. Knowing that open source sofwares are supported by large open source community gives an impression that such softwares are highly maintained and are efficient.
+
     2. Source control - Git
+        Node.js is a runtime javaScript environment which influenced the use of javaScript to write this application.
+
     3. Testing server - Travis CI 
-    4. Browser host - microsoft Azure
+        Travis and git are widely used CI/CD open source tools. This influenced the use of these tools in this assessment. Moreover, they have a relatively strong open source community support.
 
- Design and architecture decisions
-    1. Motive behind using node.js is because it is an open source server-side tool. Knowing that
-       open source sofwares are supported by large open source community gives an impression that
-       such softwares are maintained and are efficient.
+    4. URL host - microsoft Azure
+        Use of azure to host the application was genuinly influenced by the fact that it is compatible 
+        with Travis and easy to use.
 
-    2. Node.js is a runtime javaScript environment. This influenced use of javaScript to write this
-       application.
-
-    3. Travis and git are widely used CI/CD open source tools. This influenced the use of these tools 
-       in this assessment. Moreover, they have a relatively strong open source community support.
-
-    4. Use of azure to host the application was genuinly influeced by the fact that it is compatible 
-       with Travis and easy to use.
+    5. Storage system - JSON file
+        The microservice makes use of a JSON file as a storage system. This was influenced the simplicity associated 
+        with JSON i.e querries in JSON file are relatively easy compared to other storage systems.
