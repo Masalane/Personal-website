@@ -2,13 +2,18 @@
 
 let express = require('express')
 let app = express()
+let path = require('path')
+let bodyParser = require('body-parser')
 
-// loading our routers
-// let mainRouter = require('./mainRoutes.js')
-let classRouter = require('./routes/classRoutes.js')
+// loading the router
+let todoRouter = require('./todoRoute.js')
 
-// mounting our routers
-// app.use('/', mainRouter)
-app.use('/class', classRouter)
-app.listen(3000)
-console.log('Express server running on port 3000')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// mounting the router
+app.use('/purchaseVoucher', todoRouter)
+
+let port = process.env.PORT || 3000
+app.listen(port)
+console.log('Express server running on port', port)
