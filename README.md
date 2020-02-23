@@ -35,7 +35,7 @@ Tools:
 
     4. Application host - Microsoft Azure
         Microsoft azure integrates well with Travis CI. It also has a free trial version which allows one to host their 
-        application for a fairly number of days. 
+        application for a fairly reasonable number of days. 
 
     5. Data Storage System - JSON file
         The microservice makes use of a JSON file as a storage system. This was influenced the simplicity associated 
