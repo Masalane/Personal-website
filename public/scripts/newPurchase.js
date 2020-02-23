@@ -6,13 +6,11 @@ let verifyPurchase = require('./verifyPurchase.js')
 
 let customerPurchase = []
 let token = []
-const TOKEN_LENGTH = 20
 function getPurchase () {
   return customerPurchase
 }
 
 function processPurchase (purchase) {
-  
   if (verifyPurchase.verifyParameters(purchase)) {
     let currCustomer = {}
     for (let index = 0; index < regCustomers.length; index++) {
@@ -28,6 +26,7 @@ function processPurchase (purchase) {
 }
 
 function generateToken () {
+  const TOKEN_LENGTH = 20
   for (let index = 1; index <= TOKEN_LENGTH; index++) {
     let randNum = Math.floor(Math.random() * Math.floor(10))
     token += randNum

@@ -56,7 +56,7 @@ test('MeterId cannot have less than 12 characters', () => {
   expect(msg).toEqual('MeterId cannot be more than 12 characters in length')
 })
 
-test('The entered parameters are valid', () => {
+test('The parameters entered are valid', () => {
 
   let msg = verifyPurchase.verifyParameters(purchase5)
   expect(msg).toEqual('Parameters are valid')
