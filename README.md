@@ -2,7 +2,7 @@
 Access the application at: 'http://kabelo.azurewebsites.net/purchaseVoucher/create'
 
 
-OR alternatively, make set-ups on your local machine using the provided set of instructions.
+OR alternatively, make a set-up on your local machine using the provided set of instructions.
 
 SET-UP INSTRUCTIONS
 
@@ -10,7 +10,7 @@ SET-UP INSTRUCTIONS
     2. Download and install Visual Studio (VS) Code, latest version.
     3. Download and install 'node.js', latest version
     4. Open the VS Code, --> go to 'File', --> go to 'Add folder to workspace' and add the microservice folder.
-    5. Open the VS code terminal. Type node index.js in the terminal.
+    5. Open the VS code terminal. Type 'npm install' followed by 'node index.js' in the terminal.
     6. Your the application won't launch because we are missing express framework.
     7. While still in the same dir, Type 'npm install --save-exact express' 
     8. Now, type 'node index.js' on your terminal. This shoud work.
@@ -24,7 +24,7 @@ Presented below are the technologies used to build the microservice. This docume
 Tools:
 
     1. Node.js with express framework 
-         Node.js is selected because it is an open source tool. Open source tool/softwares are supported by a large open source community resulting in highly maintained and efficient software products.
+         Node.js is selected because it is an open source tool. Open source tools/softwares are supported by a large open source community resulting in highly maintained and efficient software products.
 
     2. Source control - Git
         Allows one to track code changes and allows reverts where neccessary. It is good for collaboration in projects of 
