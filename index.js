@@ -6,7 +6,7 @@ let path = require('path')
 let bodyParser = require('body-parser')
 
 // loading the router
-let todoRouter = require('./todoRoute.js')
+const todoRouter = require('./todoRoute.js')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))

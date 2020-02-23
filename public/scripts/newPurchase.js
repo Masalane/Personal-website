@@ -1,8 +1,8 @@
 'use strict'
 
 // Requiring relevent js files. 
-let regCustomers = require('../../middleware/regCustomers.js')
-let verifyPurchase = require('./verifyPurchase.js')
+const regCustomers = require('../../middleware/regCustomers.js')
+const verifyPurchase = require('./verifyPurchase.js')
 
 let customerPurchase = []
 let token = []
@@ -13,13 +13,19 @@ function getPurchase () {
 
 function processPurchase (purchase) {
   if (verifyPurchase.verifyParameters(purchase)) {
-    let currCustomer = {}
     for (let index = 0; index < regCustomers.length; index++) {
+      var currCustomer = {}
       if (regCustomers[index].meterId == purchase.meterId) {
         currCustomer.name = regCustomers[index].name
         currCustomer.token = generateToken()
+        console.log(currCustomer.token)
+        break
+      }else {
+        currCustomer = '{ Customer does not exist! }'
       }
     }
+    console.log(currCustomer.token)
+    customerPurchase.splice(0, customerPurchase.length)
     customerPurchase.push(currCustomer)
   }
   else
@@ -28,6 +34,7 @@ function processPurchase (purchase) {
 
 function generateToken () {
   const TOKEN_LENGTH = 20
+  token = []
   for (let index = 1; index <= TOKEN_LENGTH; index++) {
     let randNum = Math.floor(Math.random() * Math.floor(10))
     token += randNum
