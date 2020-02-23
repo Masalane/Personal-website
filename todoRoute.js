@@ -19,7 +19,7 @@ router.get('/api/list', function (req, res) {
 router.post('/api/create', function (req, res) {
   let purchase = { amount: req.body.tokenAmount, type: req.body.tokenType, meterId: req.body.meterId }
   newPurchase.processPurchase(purchase)
-
+  console.log(purchase.type)
   console.log('Body: ', purchase)
   res.redirect(req.baseUrl + '/api/list')
 })

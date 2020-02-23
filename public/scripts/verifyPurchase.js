@@ -3,18 +3,19 @@
 const LENGTH_OF_METER_ID = 11
 
 function verifyParameters (purchase) {
-  let tokenType = purchase.type.toLowerCase()
-
   if (purchase.amount < 0) {
-    return 'Amount cannot be negative!'
+    return 'Amount cannot be negative'
   }
-  if (!(purchase.meterId.length == LENGTH_OF_METER_ID)) {
-    return 'Length of meterId must be 11'
+  else if (!(purchase.meterId.length == LENGTH_OF_METER_ID)) {
+    return 'MeterId cannot be more than 12 characters in length'
   }
-  if (!(tokenType = 'electricity token')) {
-    return 'This microservice only caters for electricity token'
+  else if (!(purchase.type == 'electricity token')) {
+    return 'Token cannot be of any other type but electricity'
+  }else {
+    return 'Parameters are valid'
   }
-  return 'Valid parameters.'
 }
 
-module.exports = verifyParameters
+module.exports = {
+  verifyParameters: verifyParameters
+}
