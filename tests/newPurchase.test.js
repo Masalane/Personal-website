@@ -41,4 +41,3 @@ test('The token voucher cannot be more than 20 digits long', () => {
   let generatedToken = customer[0].token
   expect(TOKEN_LENGTH).not.toBe(generatedToken.length)
 })
-

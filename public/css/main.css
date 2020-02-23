@@ -1,16 +1,3 @@
-body {
-	background-color: powderblue;
-}
-
-#ddStudentButton {
-	color: blue;
-}
-
-.student {
-	color: red;
-	border: 5px solid black;
-}
-
 #tokenType {
 	width: 172px;
 	height: 25px;

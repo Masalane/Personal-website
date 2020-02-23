@@ -6,6 +6,7 @@ let verifyPurchase = require('./verifyPurchase.js')
 
 let customerPurchase = []
 let token = []
+
 function getPurchase () {
   return customerPurchase
 }
@@ -22,7 +23,7 @@ function processPurchase (purchase) {
     customerPurchase.push(currCustomer)
   }
   else
-    console.log('Invalid parameters')
+    return 'Invalid parameters'
 }
 
 function generateToken () {
