@@ -18,13 +18,11 @@ function processPurchase (purchase) {
       if (regCustomers[index].meterId == purchase.meterId) {
         currCustomer.name = regCustomers[index].name
         currCustomer.token = generateToken()
-        console.log(currCustomer.token)
         break
       }else {
         currCustomer = '{ Customer does not exist! }'
       }
     }
-    console.log(currCustomer.token)
     customerPurchase.splice(0, customerPurchase.length)
     customerPurchase.push(currCustomer)
   }

@@ -14,7 +14,7 @@ router.get('/create', function (req, res) {
 })
 
 // RESTful API
-router.get('/api/list', function (req, res) {
+router.get('/api/customer', function (req, res) {
   res.json(newPurchase.getPurchase())
 })
 
@@ -22,7 +22,7 @@ router.post('/api/create', function (req, res) {
   let purchase = { amount: req.body.tokenAmount, type: req.body.tokenType, meterId: req.body.meterId }
   newPurchase.processPurchase(purchase)
   body.printBody(purchase)
-  res.redirect(req.baseUrl + '/api/list')
+  res.redirect(req.baseUrl + '/api/customer')
 })
 
 module.exports = router
