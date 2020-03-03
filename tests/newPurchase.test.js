@@ -13,7 +13,6 @@ test('The token voucher is always 20 digits long', () => {
   newPurchase.processPurchase(purchase)
   let customer = newPurchase.getPurchase()
   let generatedToken = customer[0].token
-  console.log(generatedToken)
   expect(TOKEN_LENGTH).toBe(generatedToken.length)
 })
 
