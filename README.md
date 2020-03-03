@@ -1,46 +1,27 @@
 # Personal-website
+This repository sets up continuous delivery pipeline(CD).
 
-Access the application at: 'http://kabelo.azurewebsites.net/purchaseVoucher/create'
+This piece of work presents a small microsevices application designed in JavaScript and HTML. It 
+strives demonstrate some of software engineering fundamentals and the concept of CI/CD. Presented 
+below are the technologies used to built the application. This document also substantiate brief why 
+such technologies were used as oppossed to their counters technologies.
 
-
-OR alternatively, make a set-up on your local machine using the provided set of instructions.
-
-SET-UP INSTRUCTIONS
-
-    1. Download and unzip the microservice folder.
-    2. Download and install Visual Studio (VS) Code, latest version.
-    3. Download and install 'node.js', latest version
-    4. Open the VS Code, --> go to 'File', --> go to 'Add folder to workspace' and add the microservice folder.
-    5. Open the VS code terminal. Type 'npm install' followed by 'node index.js' in the terminal.
-    6. The application won't launch because we are missing express framework.
-    7. While still in the same dir, Type 'npm install --save-exact express' 
-    8. Now, type 'node index.js' on your terminal. This shoud work.
-    9. Now, go to your browser, preferably Google chrome and type 'http://localhost:8080/purchaseVoucher/create'
-
-
-DESIGN APPROACH
-
-Presented below are the technologies used to build the microservice. This document substantiate in brief why such technologies were used.
-
-Tools:
-
-    1. Node.js with express framework 
-         Node.js is selected because it is an open source tool. Open source tools/softwares are supported by a large open source community resulting in highly maintained and efficient software products.
-
+Following are the tools used to design and test this application:
+    1. Node.js and express framework
     2. Source control - Git
-        Allows one to track code changes and allows reverts to a specific version where neccessary. It is good for collaboration in projects of 
-        any scale.
+    3. Testing server - Travis CI 
+    4. Browser host - microsoft Azure
 
-    3. CI/CD server - Travis CI 
-        Travis is a widely used CI/CD tool. It is capable of building, testing and deploying code with non-complex instructions. Moreover, it has a relatively strong open source community support.
+ Design and architecture decisions
+    1. Motive behind using node.js is because it is an open source server-side tool. Knowing that
+       open source sofwares are supported by large open source community gives an impression that
+       such softwares are maintained and are efficient.
 
-    4. Application host - Microsoft Azure
-        Microsoft azure integrates well with Travis CI. It also has a free trial version which allows one to host their 
-        application for a fairly reasonable number of days. 
+    2. Node.js is a runtime javaScript environment. This influenced use of javaScript to write this
+       application.
 
-    5. Data Storage System - JSON file
-        The microservice makes use of a JSON file as a storage system. This was influenced the simplicity associated 
-        with JSON i.e querries in JSON file are relatively easy compared to other storage systems.
+    3. Travis and git are widely used CI/CD open source tools. This influenced the use of these tools 
+       in this assessment. Moreover, they have a relatively strong open source community support.
 
-
-In conclusion, the aforementioned technologies were selected due to their ease of use, zero cost, efficiency and high open source community support.
+    4. Use of azure to host the application was genuinly influeced by the fact that it is compatible 
+       with Travis and easy to use.

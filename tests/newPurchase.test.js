@@ -1,5 +1,5 @@
-const newPurchase = require('../public/scripts/newPurchase.js')
-const regCustomers = require('../middleware/regCustomers.js')
+let newPurchase = require('../public/scripts/newPurchase.js')
+let regCustomers = require('../middleware/regCustomers.js')
 
 const purchase = {
   amount: 200,
