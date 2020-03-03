@@ -5,9 +5,9 @@ let express = require('express')
 let router = express.Router()
 
 // Loading files
-const newPurchase = require('./public/scripts/newPurchase.js')
-const regCustomers = require('./middleware/regCustomers.js')
-const body = require('./middleware/printBody.js')
+let newPurchase = require('./public/scripts/newPurchase.js')
+let regCustomers = require('./middleware/regCustomers.js')
+let body = require('./middleware/printBody.js')
 
 router.get('/create', function (req, res) {
   res.sendFile(path.join(__dirname, 'views', 'create.html'))
