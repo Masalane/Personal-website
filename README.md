@@ -1,5 +1,5 @@
 # Personal-website
-This repository sets up continuous delivery pipeline(CD).
+Electricity Integration System.
 
 Access the application at: 'http://kabelo.azurewebsites.net/purchaseVoucher/create'
 
