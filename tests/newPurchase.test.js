@@ -31,7 +31,7 @@ test('The token voucher cannot be more than 20 digits long', () => {
   newPurchase.processPurchase(purchase)
   let customer = newPurchase.getPurchase()
   let generatedToken = customer[0].token
-  expect(TOKEN_LENGTH).not.toBe(generatedToken.length)
+  expect(TOKEN_LENGTH).toBe(generatedToken.length)
 })
 
 test('The electricity token is always unique and is randomly generated.', () => {
